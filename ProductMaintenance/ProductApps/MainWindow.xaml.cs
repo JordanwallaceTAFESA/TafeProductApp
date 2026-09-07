@@ -35,9 +35,11 @@ namespace ProductApps
                 cProduct.calTotalPayment();
                 decimal totalCharge = cProduct.TotalPayment + 25;
                 decimal wrapCharge = totalCharge + 5;
+                double GSTCharge = Convert.ToDouble(wrapCharge) * 1.1;
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalChargeTextBox.Text = Convert.ToString(totalCharge);
                 WrapChargeTextBox.Text = Convert.ToString(wrapCharge);
+                GSTChargeTextBox.Text = Convert.ToString(GSTCharge);
             }
             catch (FormatException)
             {
